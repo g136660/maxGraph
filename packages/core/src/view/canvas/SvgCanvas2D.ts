@@ -1331,10 +1331,10 @@ class SvgCanvas2D extends AbstractCanvas2D {
           fo.setAttribute('y', String(yp));
         } else {
           fo.removeAttribute('y');
-          flex += `padding-top: ${yp}px; `;
+          flex += `padding-top: ${yp - 2}px; `;
         }
 
-        div.setAttribute('style', `${flex}margin-left: ${Math.round(x + dx)}px;`);
+        div.setAttribute('style', `${flex}margin-left: ${Math.round(x + dx) - 2}px;`);
         t += r !== 0 ? `rotate(${r} ${x} ${y})` : '';
 
         // Output allows for reflow but Safari cannot use absolute position,
